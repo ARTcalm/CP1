@@ -1,0 +1,72 @@
+.slider{
+    margin-bottom: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.slides{
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+}
+
+.slides::-webkit-scrollbar{
+    appearance: none;
+}
+
+.item_card{
+    background: white;
+    border-radius: 16px;
+}
+
+.item_information {
+    padding: 10px 20px;
+}
+
+.item_information h1{
+    margin: 0;
+    font-size: 24px;
+}
+
+.item_information button{
+    background: none;
+    outline: 0;
+    border: 0;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 16px;
+    transition: all 300ms ease;
+    &:hover{
+        color: white;
+        background: #27332C;
+    }
+}
+
+.item_card img{
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+    max-width: 300px;
+    max-height: 500px;
+}
+
+.card_toCatalog{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+    opacity: 0.7;
+    transition: all 300ms ease;
+    background: #416e5441;
+    color: white;
+    border: 0;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.card_toCatalog a{
+    text-decoration: none;
+    color: inherit;
+    
+}
