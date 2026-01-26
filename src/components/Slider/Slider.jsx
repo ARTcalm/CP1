@@ -64,7 +64,7 @@ export const Slider = (props) => {
 
     return(
         <div className={style.slider}>
-            <h1>{items[0].title}</h1>
+            <h1 style={{color:"white"}}>{items[0].title}</h1>
             <div className={style.slides}
                 ref={containerRef} 
                 onMouseDown={handleMouseDown}
@@ -74,12 +74,16 @@ export const Slider = (props) => {
             >
                 {items.map(el => (
                     <div key={el.id} className={style.item_card} >
-                        <img src={el.img} />
-                        <div className={style.item_information}>
-                            <h1>{el.name}</h1>
-                            <p>PRICE: {el.price}$</p>
-                            <button>В корзину</button>
-                        </div>
+                      <div className={style.item_information}>
+                          <div className={style.item_image}>
+                            <img src={el.img} />
+                          </div>
+                          <div className={style.item_text}>
+                              <p>{el.price}₽</p>
+                              <h1>{el.name}</h1>
+                              <button>В корзину</button>
+                          </div>
+                      </div>    
                     </div>
                 ))}
                 <div onClick={()=>scrollToElement('catalog')} className={style.card_toCatalog}>

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import style from "./Header.module.css"
+import { NavLink } from "react-router"
+
 
 export const Header = (props) => {
-
-    let {favoursOpen, setFavoursOpen} = props
-
+    
     const [headerStyle, setHeaderStyle] = useState({
         opacity: 1,
     })
@@ -33,19 +33,21 @@ export const Header = (props) => {
     }, [])
 
     return(
-        <div className={style.headerContainer} style={{opacity: headerStyle.opacity}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <div className={style.menu}>
-                <img alt="logo" src="./img/Logo2.svg" style={{cursor:"pointer", height:"60px"}} />
-                <div className={style.nav}>
-                    <a><img alt="burger" src="./img/burger_menu.svg"/>Каталог</a>
-                    <a>О нас</a>
-                    <a>Контакты</a>
-                </div>
-                <div className={style.deliver_favour}>
-                    <img alt="delivery" src="./img/deliveryIcon.svg" />
-                    <img alt="favours" src="./img/favoursIcon.svg" onClick={() => setFavoursOpen(favoursOpen = !favoursOpen)}/>
+        <>
+            <div className={style.headerContainer} style={{opacity: headerStyle.opacity}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                <div className={style.menu}>
+                    <NavLink to={"/"} ><img alt="logo" src="./img/Logo2.svg" style={{cursor:"pointer", height:"100px"}} /></NavLink>
+                    <div className={style.nav}>
+                        <NavLink to={"/catalog"}><img alt="burger" src="./img/burger_menu.svg"/>Каталог</NavLink>
+                        <NavLink to={"/aboutus"}>О нас</NavLink>
+                        <NavLink to={"/contact"}>Контакты</NavLink>
+                    </div>
+                    <div className={style.deliver_favour}>
+                        <NavLink to={'/cart'}><img alt="delivery" src="./img/deliveryIcon.svg"/></NavLink>
+                        <NavLink to={'/favours'}><img alt="favours" src="./img/favoursIcon.svg" /></NavLink>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }

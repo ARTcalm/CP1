@@ -1,9 +1,14 @@
 .catalog_container{
     display: flex;
+    gap: 10px;
+    max-width: 1300px;
+    margin: 20px auto;
+    flex-direction: column;
+}
+
+.catalogs_panels{
+    display: flex;
     gap: 30px;
-    max-width: 1440px;
-    margin: 0 auto;
-    margin-bottom: 30px;
 }
 
 .filters_panel{
@@ -22,25 +27,53 @@
     position: relative;
     background: white;
     border-radius: 16px;
+    max-width: 300px;
+    max-height: 600px;
+}
+
+.item_information{
     display: flex;
     flex-direction: column;
+    height: 550px;
 }
 
-.item_card img{
+.item_image{
+    border-radius: 16px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.item_image img{
+    width: 300px;
+    height: 400px;
+    object-fit: fill;
     border-radius: 12px 12px 0 0;
-    max-width: 300px;
+    transition: all 500ms ease;
 }
 
-.item_information {
+.item_image img:hover{
+    transform: scale(1.2);
+}
+
+
+.item_text{
+    display: flex;
+    flex-direction: column;
     padding: 10px 20px;
+    min-height: 140px;
 }
 
-.item_information h1{
+.item_text h1{
     margin: 0;
-    font-size: 24px;
+    font-size: 16px;
 }
 
-.item_information button{
+.item_text p{
+    margin: 0;
+}
+
+.item_text button{
+    margin-top: auto;
     background: none;
     outline: 0;
     border: 0;
@@ -48,6 +81,7 @@
     width: 100%;
     padding: 10px 0;
     border-radius: 16px;
+    cursor: pointer;
     transition: all 300ms ease;
     &:hover{
         color: white;
@@ -56,6 +90,7 @@
 }
 
 .item_card .favours{
+    z-index: 999;
     position: absolute;
     max-width: 30px;
     right: 10px;
