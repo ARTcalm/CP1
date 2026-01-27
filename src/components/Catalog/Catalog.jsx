@@ -1,7 +1,10 @@
+import { Greeting } from "../Greeting/Greeting"
 import style from "./Catalog.module.css"
+import { useState } from "react"
+import { GOODS } from "../../consts"
 
 export const Catalog = (props) => {
-    const {items, setItems, setFavoursItems, favoursItems, cartItems, setCartItems} = props
+    const {items, setItems, cartItems, setCartItems} = props
 
     const sentToFavours = (el,id) =>{
         setItems(items => {
@@ -15,25 +18,60 @@ export const Catalog = (props) => {
                 return el
             })}
         )
-        
     }
 
-    const handleAddCart = (item) => {// К ФУНКЦИИ ДОБАВЛЕНИЯ В КОРЗИНУ, ДОБАВИЛ УСЛОВИЕ ЧТОБЫ ТОВАРЫ НЕ ПОВТОРЯЛИСЬ В КОРЗИНЕ БОЛЬШЕ 1 РАЗА
+    const [activeIndex, setActiveIndex] = useState(null)
+    const availableTitle = [...new Set(GOODS.map(el => el.title))]
+
+    const chooseTitle = (title) => {
+        if(title === "Всё"){
+            setItems(GOODS)
+            setActiveIndex(null)
+            console.log(title)
+        }
+        else{
+            setItems(GOODS.filter(el => el.title === title ))
+        }
+    }
+
+
+    const handleAddCart = (item) => {
         const isInArray = cartItems.some(el => el.id === item.id)
         if(!isInArray){
         setCartItems(prev => [...prev, item])}
-        console.log(cartItems)
     }
 
 
-
+ [{title:"dsdsd", truefalse: false}]
     return(
         <>
+        <Greeting />
         <div id="catalog" className={style.catalog_container}>
             <h1 style={{color:"white"}}>Каталог</h1>
             <div className={style.catalogs_panels}>
                 <div className={style.filters_panel}>
-                    ФИЛЬТРЫ
+                    <h1>Категория</h1>
+                    <div className={style.categories_container}>
+                        {availableTitle.map((el,index) => (
+                            <div className={style.category_button} >
+                                <div
+                                    className={style.category_title}  
+                                    onClick={() => {chooseTitle(el), setActiveIndex(index)}}
+                                    style={{background:activeIndex === index ? "#27332C": '', color:activeIndex === index ? "white" : ''}}
+                                >
+                                    {el}
+                                </div>
+                                {activeIndex === index ? <div className={style.cancel_button} onClick={() => chooseTitle("Всё")} >X</div> : ''}
+                            </div>
+                        ))}
+                    </div>
+                    <h1>Сортировка</h1>
+                    <div className={style.sort_container}>
+                        <select>
+                            <option>По возрастанию: Цены</option>
+                            <option>По убыванию: Цены</option>
+                        </select>
+                    </div>
                 </div>
                 <div className={style.items_panel}>
                     {items.map(el => (

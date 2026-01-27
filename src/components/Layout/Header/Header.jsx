@@ -38,7 +38,7 @@ export const Header = (props) => {
                 <div className={style.menu}>
                     <NavLink to={"/"} ><img alt="logo" src="./img/Logo2.svg" style={{cursor:"pointer", height:"100px"}} /></NavLink>
                     <div className={style.nav}>
-                        <NavLink to={"/catalog"}><img alt="burger" src="./img/burger_menu.svg"/>Каталог</NavLink>
+                        <NavLink to={"/"}><img alt="burger" src="./img/burger_menu.svg"/>Каталог</NavLink>
                         <NavLink to={"/aboutus"}>О нас</NavLink>
                         <NavLink to={"/contact"}>Контакты</NavLink>
                     </div>

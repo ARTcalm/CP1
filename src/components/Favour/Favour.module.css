@@ -1,9 +1,84 @@
-.favoursContainer{
-    position: relative;
+.favoursBG{
+    display: flex;
+    flex-direction: column;
+    border-radius: 32px;
+    background: white;
+    max-width: 900px;
+    padding: 80px;
+    margin: 30px auto;
+    height: 100vh;
 }
 
-.closeButton{
+.favoursTrack{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height:80vh;
+    min-width: 350px;
+    overflow-y: scroll;
+}
+
+.favours_card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    background: #27332C;
+    padding-bottom: 5px;
+    border-radius:12px;
+}
+
+.favours_card img{
+    object-fit: cover;
+    border-radius:12px;
+    transition: all 500ms ease;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+.favour_info{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    color: white;
+    min-height: 140px;
+}
+
+.favours_card h1{
+    font-size: 16px;
+}
+
+.favours_card button{
+    margin-top: auto;
+    background: none;
+    outline: 0;
+    border: 0;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    color: white;
+    &:hover{
+        color: white;
+        background: black;
+    }
+}
+
+.favours{
     position: absolute;
     right: 0;
+    max-width: 30px;
     cursor: pointer;
+    fill: black;
+    stroke:black ;
+    transition: all 300ms ease;
+}
+
+.favours.active{
+    fill: red;
+    stroke: red;
+    animation: sendToFavour 200ms ease forwards;
 }

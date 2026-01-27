@@ -35,11 +35,10 @@ export const Routers = () => {
         <Header />        
         <div className="main">
             <Routes>
-                <Route path="/" element={<Main groupedSliderItems={groupedSliderItems} />} />
-                <Route path="/catalog" element={<Catalog items={items} setItems={setItems} cartItems={cartItems} setCartItems={setCartItems} favoursItems={favoursItems} setFavoursItems={setFavoursItems} />}/>
+                <Route path="/" element={<Catalog items={items} setItems={setItems} cartItems={cartItems} setCartItems={setCartItems} favoursItems={favoursItems} setFavoursItems={setFavoursItems} />}/>
                 <Route path="/aboutus" element={<AbouUs />} />
                 <Route path="/cart" element={<Cart  cartItems={cartItems} setCartItems={setCartItems} />} />
-                <Route path="/favours" element={<Favours  favoursItems={favoursItems} setFavoursItems={setFavoursItems} />} />
+                <Route path="/favours" element={<Favours  items={items} setItems={setItems} favoursItems={favoursItems} setFavoursItems={setFavoursItems} />} />
             </Routes>
         </div>
         <Footer />
