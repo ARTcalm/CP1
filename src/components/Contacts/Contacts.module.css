@@ -1,0 +1,46 @@
+.contactsBG{
+    margin: 30px auto;
+    border-radius: 32px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    background: #7E9989;
+    color: white;
+    padding: 40px;
+}
+
+.panels{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.panel.left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactInfo{
+    background: #27332C;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 16px;
+    max-width: 510px;
+}
+
+
+
+.panel.right{
+    min-height: 300px;
+    width: 550px;
+}
+
+.panel.right iframe{
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+

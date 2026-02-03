@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import style from "./Greeting.module.css"
+import style from "./Greeting.module.css";
 
 export const Greeting = () => {
     const [currentIndex, setCurrentIndex] = useState(0)

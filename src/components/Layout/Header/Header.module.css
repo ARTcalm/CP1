@@ -30,6 +30,33 @@
     color: white;
 }
 
+#deliverIcon{
+    position:relative;
+}
+
+.counterCart{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 32px;
+    top:0px;
+    right: -10px;
+    background: #7E9989;
+    color: white;
+}
+
+.counterCart.active{
+    animation: apperanceCounter 300ms ease forwards;
+}
+
+.counterCart.noactive{
+    transform: scale(0);
+    animation: disapperanceCounter 300ms ease forwards;
+}
+
 .deliver_favour{
     display: flex;
     gap: 40px;
@@ -39,25 +66,22 @@
     cursor: pointer;
 }
 
-.popUpWindow{
-    position: fixed;
-    z-index: 2000;
-    right: 0;
-    top: 100px;
-    color: black;
-    background: white;
-    width: clamp(200px, 300px, 400px);
-    padding: 20px;
-    min-height: 300px;
-    border-radius: 16px 0 0 16px;
-    animation: popUp 300ms ease;
-}
-
-@keyframes popUp {
+@keyframes apperanceCounter {
     0%{
-        transform: translateX(100%);
+        transform: scale(0);
     }
     100%{
-        transition: translateY(0);
+        transform: scale(1);
+    }
+
+}
+
+@keyframes disapperanceCounter {
+    0%{
+        transform: scale(1);
+    }
+    
+    100%{
+        transform: scale(0);
     }
 }
