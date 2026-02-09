@@ -1,0 +1,12 @@
+.ordersContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.orderItemsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

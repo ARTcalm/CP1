@@ -1,0 +1,231 @@
+.deliveryContainerBG{
+    max-width: 1200px;
+    background: #7E9989;
+    margin: 30px auto;
+    border-radius: 32px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: max-content;
+}
+
+.form{
+    width: 100%;
+    max-width: 45%;
+    padding: 40px 20px;
+}
+
+.form h1{
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.formBG{
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 32px;
+}
+
+.label{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.label input{
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    background: none;
+    background: #27332C;
+    color: white;
+    border-radius: 32px;
+}
+
+#notice{
+    resize: none;
+    height: 200px;
+    border-radius: 16px;
+    background: #27332C;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.adress{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.adress label{
+    width: 49%;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact label{
+    width: 49%;
+}
+
+.label span {
+    position: absolute;
+}
+
+
+.informationPanels{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 45%;
+    padding: 40px 20px;
+}
+
+
+.cartItemsTrack::-webkit-scrollbar{
+    appearance: none;
+    height: 10px;
+    background: black;
+    padding: 5px;
+    border-radius: 32px;
+}
+
+
+
+.cartItemsTrack::-webkit-scrollbar-track{
+    background: rgb(146, 146, 146);
+    border-radius: 32px;
+}
+
+.cartItemsTrack::-webkit-scrollbar-thumb{
+    background: rgb(202, 202, 202);
+    border-radius: 32px;
+}
+
+.cartItemsTrack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow-y: scroll;
+    width: 100%;
+    height: 540px;
+    background: white;
+    border-radius: 32px 32px 0 0;
+    padding: 10px 0px;
+}
+
+.trackCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    background: #7E9989;
+    width: 100%;
+    max-width: 80%;
+    border-radius: 16px;
+}
+
+.trackCard img{
+    max-width: 60px;
+    border-radius:10% ;
+    margin-right: 20px;
+}
+
+.sumPrice{
+    max-width: 200px;
+    margin-left: auto;
+}
+
+.trackCard svg{
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:hover{
+        color:red;
+        animation: shake 300ms ease;
+    }
+}
+
+@keyframes shake{
+    0%{transform: rotate(0);}
+    25%{transform: rotate(10deg);}
+    50%{transform: rotate(-10deg)}
+    75%{transform: rotate(10deg)}
+    100%{transform: rotate(0);}
+}
+
+.trackCard h1{
+    font-size: 14px;
+    max-width: 200px;
+}
+
+
+.info{
+    background: #27332C;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 32px 32px;
+}
+
+.info h1, .info p{
+    margin: 0;
+}
+
+.info h1{
+    margin-bottom: 10px;
+}
+
+.submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.submit button{
+    background: none;
+    border: 0;
+    outline: 0;
+    background: #7E9989;
+    color: white;
+    padding: 10px 0;
+    font-family: inherit;
+    width: 80%;
+    border-radius: 32px;
+    transition: all 500ms ease;
+    &:hover{
+        background-color: #687d70;
+    }
+}
+
+.submit div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.submit div p{
+
+    font-size: 12px;
+}
+
+.submit div p a{
+    color: white;
+}
+

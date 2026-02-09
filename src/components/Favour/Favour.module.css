@@ -1,91 +1,26 @@
 .favoursBG{
     display: flex;
-    flex-direction: column;
-    background: #7E9989;
     border-radius: 32px;
-    min-height: 300px;
-    padding: 40px;
     max-width: 1200px;
     margin: 30px auto;
-    color: white;
     background: #7E9989;
 }
 
-.favoursBG h1{
-    
-    font-size: 32px;
-}
+
+
 
 .favoursTrack{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.favours_card{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-width: 270px;
-    background: white;
-    padding-bottom: 5px;
-    border-radius:12px;
-}
-
-.favours_card img{
-    object-fit: cover;
-    border-radius:12px;
-}
-
-.favour_info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 20px;
-    height: 100%;
-}
-
-.favour_info p{
-    color: black;
-    font-size: 18px;
-    margin: 0;
-}
-
-.favours_card h1{
-    padding: 0;
-    max-width: 200px;
-    font-size: 14px;
-    background: none;
-    color: black;
-}
-
-.favours_card button{
-    background: white;
-    outline: 0;
-    border: 0;
-    border: 1px solid black;
+    flex-wrap: wrap; 
+    padding: 30px 40px;
     width: 100%;
-    padding: 10px 0;
-    border-radius: 16px;
-    cursor: pointer;
-    transition: all 300ms ease;
-    color: black;
-    &:hover{
-        color: white;
-        background: #27332C;
-    }
 }
 
-.favours{
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    max-width: 30px;
-    cursor: pointer;
-    fill: red;
-    stroke: red;
-    transition: all 300ms ease;
-    &:hover{
-        transform: scale(1.1);
-    }
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap:20px;
+    width: 100%;
 }
+

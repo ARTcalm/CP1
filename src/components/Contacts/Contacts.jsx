@@ -4,9 +4,9 @@ import style from "./Contacts.module.css";
 export const Contacts = () => {
     return(
         <div className={style.contactsBG}>
+            <div className={style.panels}>
             <h1>Контакты</h1>
             <hr style={{width:"100%"}} />
-            <div className={style.panels}>
                 <div className={`${style.panel} ${style.left}`}>
                     <div className={style.contactInfo}>
                         <h1>Адрес</h1>
@@ -23,8 +23,7 @@ export const Contacts = () => {
                 <div className={`${style.panel} ${style.right}`}>
                     <iframe 
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3Aff528a4365eeab6652faffe6ef265ac67d582b5d90db29f5aa5d141a9e791404&amp;source=constructor"  
-                    frameborder={0}
-
+                    frameBorder={0}
                     >
                     </iframe>
                 </div>

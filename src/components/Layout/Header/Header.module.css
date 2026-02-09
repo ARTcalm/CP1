@@ -1,28 +1,35 @@
 .headerContainer{
     position: fixed;
     width: 100%;
-    height: 100px;
-    background: rgb(0, 0, 0);
+    height: 75px;
     transition: all 500ms ease;
     z-index: 1000;
+    background: #7E9989;
 }
 
 
 .menu{
+    max-width: 1200px;
+    margin: 0 auto;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color:white;
+}
+
+
+.logo img{
+    max-width: 60px;
 }
 
 .nav{
+    position: relative;
     display: flex;
-    gap:75px;
+    gap:70px;
 }
 
 .nav a{
-    font-size: 24px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -32,20 +39,21 @@
 
 #deliverIcon{
     position:relative;
+    display: flex;
+    gap: 10px;
 }
 
 .counterCart{
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30px;
     width: 30px;
     border-radius: 32px;
-    top:0px;
-    right: -10px;
-    background: #7E9989;
-    color: white;
+
+    background: white;
+    color: black;
 }
 
 .counterCart.active{
@@ -59,10 +67,11 @@
 
 .deliver_favour{
     display: flex;
-    gap: 40px;
+    gap: 30px;
 }
 
 .deliver_favour img{
+    max-width: 40px;
     cursor: pointer;
 }
 

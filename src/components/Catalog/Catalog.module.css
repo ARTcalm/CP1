@@ -1,14 +1,16 @@
 .catalog_container{
     display: flex;
     gap: 10px;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 20px auto;
     flex-direction: column;
+    background: white;
+    border-radius: clamp(0.5vw, 0.75vw, 1vw);
 }
 
 .catalogs_panels{
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .filters_panel{
@@ -145,11 +147,11 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 20px;
     background: #7E9989;
     padding: 20px;
     border-radius: 32px;
-    min-width: 890px;
+    max-width: 780px;
+    width: 100%;
 }
 
 .items{
@@ -158,102 +160,8 @@
     gap: 20px;
 }
 
-.item_card{
-    position: relative;
-    background: white;
-    border-radius: 16px;
-    max-width: 280px;
-    max-height: 600px;
-}
-
-.item_information{
-    display: flex;
-    flex-direction: column;
-    height: 550px;
-}
-
-.item_image{
-    border-radius: 16px;
-    height: 400px;
-    overflow: hidden;
-}
-
-.item_image img{
-    width: 300px;
-    height: 400px;
-    object-fit: fill;
-    border-radius: 12px 12px 0 0;
-    transition: all 500ms ease;
-}
-
-.item_image img:hover{
-    transform: scale(1.2);
-}
 
 
-.item_text{
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-    min-height: 140px;
-}
-
-.item_text h1{
-    margin: 0;
-    font-size: 16px;
-}
-
-.item_text p{
-    margin: 0;
-}
-
-.item_text button{
-    margin-top: auto;
-    background: none;
-    outline: 0;
-    border: 0;
-    border: 1px solid black;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 16px;
-    cursor: pointer;
-    transition: all 300ms ease;
-    &:hover{
-        color: white;
-        background: #27332C;
-    }
-}
-
-.item_card .favours{
-    z-index: 999;
-    position: absolute;
-    max-width: 30px;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    fill: white;
-    stroke:black ;
-    transition: all 300ms ease;
-
-}
-
-.item_card .favours.active{
-    fill: red;
-    stroke: red;
-    animation: sendToFavour 200ms ease forwards;
-}
-
-@keyframes sendToFavour {
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.2);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
 
 
 .containerClassName{

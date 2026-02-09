@@ -1,9 +1,9 @@
 .footer{
-    background: black;
+    background: #7E9989;
     color: white;
     display: flex;
     justify-content: space-around;
-    height: 200px;
+    height: 100px;
 }
 
 .footer a{
