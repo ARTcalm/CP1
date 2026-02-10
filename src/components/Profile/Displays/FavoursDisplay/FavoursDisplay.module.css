@@ -88,3 +88,9 @@
         transform: scale(1.1);
     }
 }
+
+@media (max-width:1200px) {
+    .favoursTrack{
+        min-height: 50vh;
+    }
+}

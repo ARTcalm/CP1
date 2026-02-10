@@ -4,9 +4,9 @@ import style from "./Contacts.module.css";
 export const Contacts = () => {
     return(
         <div className={style.contactsBG}>
-            <div className={style.panels}>
             <h1>Контакты</h1>
             <hr style={{width:"100%"}} />
+            <div className={style.panels}>
                 <div className={`${style.panel} ${style.left}`}>
                     <div className={style.contactInfo}>
                         <h1>Адрес</h1>

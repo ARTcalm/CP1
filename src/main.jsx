@@ -4,8 +4,10 @@ import './index.css'
 import {App} from './App.jsx'
 import { BrowserRouter } from 'react-router'
 
+const basename = import.meta.env.BASE_URL || '/'
+
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename='/CommandWorks/CP1/'>
+  <BrowserRouter basename={basename}>
     <App />
   </BrowserRouter>,
 )

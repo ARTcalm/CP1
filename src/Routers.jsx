@@ -24,6 +24,7 @@ export const Routers = () => {
     const [recentlyItems, setRecentlyItems] = useState([])
     const [orders, setOrders] = useState([])
     const location = useLocation()
+    console.log(location.pathname)
 
 
     const handleAddRecently = (item) => {
@@ -100,7 +101,7 @@ export const Routers = () => {
 
     return(
         <>
-        <Header cartItems={cartItems} />        
+        <Header cartItems={cartItems} favoursItems={favoursItems} />        
         <div className="main">
             <Routes location={location} key={location.pathname}>
                 <Route index element={<Catalog handleFavours={handleFavours} handleAddCart={handleAddCart} items={items} setItems={setItems} searchedItems={searchedItems} setSearchedItems={setSearchedItems} handleAddRecently={handleAddRecently} />}/>

@@ -38,5 +38,28 @@
     border-radius: 0 16px 16px 0;
 }
 
+@media (max-width:1200px) {
+    .personalCabinetBG{
+        max-width: 768px;
+        flex-direction: column;
+        padding: 0 0 20px 0;
+        border-radius: 16px;
+    }
+    .sideBarMenu{
+        width: 100%;
+        flex-direction: row;
+        padding: 0;
+        border-radius: 16px 16px 0 0;
+        gap: 0;
+    }
 
+    .buttonMenu{
+        margin: 10px;
+        width: 100%;
+    }
+    .display{
+        padding: 0;
+        border-radius: 0 0 16px 16px;
+    }
+}
 

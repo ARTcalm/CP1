@@ -8,7 +8,12 @@ body{
 }
 
 .main{
-
     padding-top:75px ;
     min-height: 100vh;
+}
+
+@media (max-width:768px) {
+    .main{
+        padding-top: 30px;
+    }
 }

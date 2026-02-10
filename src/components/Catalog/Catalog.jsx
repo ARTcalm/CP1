@@ -89,7 +89,7 @@ export const Catalog = (props) => {
                                 <div
                                     className={style.category_title}  
                                     onClick={() => {chooseTitle(el), setActiveTitle(index)}}
-                                    style={{background:activeTitle === index ? "#27332C": '', color:activeTitle === index ? "white" : ''}}
+                                    style={{background:activeTitle === index ? "linear-gradient(-45deg, #378D5A, #27332C)": '', color:activeTitle === index ? "white" : ''}}
                                 >
                                     {el}
                                 </div>
@@ -101,7 +101,7 @@ export const Catalog = (props) => {
                     <div className={style.sort_container}>
                         <div 
                             className={`${style.sort_open} ${isSortActive ? style.active :""}`}
-                            style={{background:sortStatus !== ""? "#27332C" : "none", color:sortStatus !== "" ? "white" : "black"}} 
+                            style={{background:sortStatus !== ""? "linear-gradient(-45deg, #378D5A, #27332C)" : "none", color:sortStatus !== "" ? "white" : "black"}} 
                             onClick={() => setIsSortActive(isSortActive = !isSortActive)}>
                             <div>{sortStatus === "" ? "Выберите сортировку" : sortStatus}</div>
                             <span className={`${style.sort_arrow} ${isSortActive ? style.active :""}`}>
@@ -118,7 +118,10 @@ export const Catalog = (props) => {
                 </div>
                 <div className={style.items_panel}>
                     <div className={style.items}>
-                        {currentItemsOnPage.map(el => (
+                        {currentItemsOnPage.length === 0? 
+                        <h1 style={{color:"white"}}>Ничего не найдено</h1>
+                        :
+                        currentItemsOnPage.map(el => (
                             <Item item={el} key={el.id} handleAddCart={handleAddCart} handleFavours={handleFavours} handleAddRecently={handleAddRecently} />
                         ))}
                     </div>
