@@ -84,7 +84,7 @@ export const DeliveryForm = (props) => {
     return(
         <div className={style.deliveryContainerBG}>
             <form className={style.form} >
-                <h1 style={{fontSize:"54px"}}>Заполните форму</h1>
+                <h1 className={style.formTitle}>Заполните форму</h1>
                 <div className={style.formBG}>
                     <h1>Адрес доставки</h1>
                     <hr style={{border:"1px solid black"}}/>
@@ -130,7 +130,7 @@ export const DeliveryForm = (props) => {
 
                     {cartItems.map(el => (
                         <div key={el.id} className={style.trackCard}>
-                            <img src={`/CommandWorks/CP1/${el.img}`}  />
+                            <img src={el.img}  />
                             <div>
                                 <h1>{el.name}</h1>
                                 <p>{el.count} шт</p>

@@ -9,10 +9,17 @@
     max-height: max-content;
 }
 
+.formTitle{
+    font-size: 54px;
+}
+
 .form{
     width: 100%;
     max-width: 45%;
     padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: max-content;
 }
 
 .form h1{
@@ -229,3 +236,31 @@
     color: white;
 }
 
+
+@media (max-width:1200px) {
+    .deliveryContainerBG{
+        max-width: 768px;
+        justify-content: space-between;
+    }
+
+    .form{
+        padding: 0;
+    }
+
+    .formTitle{
+        font-size: 32px;
+    }
+
+    .formBG{
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .informationPanels{
+        padding: 40PX 0;
+    }
+
+    .adress .label{
+        max-width: 48%;
+    }
+}

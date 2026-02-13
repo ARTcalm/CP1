@@ -3,11 +3,12 @@ import style from "./Greeting.module.css";
 
 export const Greeting = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
+    const basename = "/CommandWorks/CP1"
     const greetingImages = [
-        "/img/greeting_image1.png",
-        "/img/greeting_image2.png",
-        "/img/greeting_image3.png",
-        "/img/greeting_image4.png",
+        `${basename}/img/greeting_image1.png`,
+        `${basename}/img/greeting_image2.png`,
+        `${basename}/img/greeting_image3.png`,
+        `${basename}/img/greeting_image4.png`,
     ]
 
 
@@ -28,7 +29,7 @@ export const Greeting = () => {
         <div className={style.greetingContainerBG}>
             <div className={style.greetingContainer}>
                 <div className={style.message_container}>
-                    <img src="/img/greeting_message.svg"/>
+                    <img src={`${basename}/img/greeting_message.svg`} />
                 </div>
                 <div className={style.image_container}>
                     <div style={{

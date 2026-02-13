@@ -1,5 +1,5 @@
-import { Route, Routes, useLocation } from "react-router";
-import { useEffect, useMemo, useState } from 'react'
+import { Route, Routes, useLocation, useNavigate } from "react-router";
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Header } from './components/Layout/Header/Header'
 import { Footer } from './components/Layout/Footer/Footer'
 import { GOODS } from './consts'
@@ -24,7 +24,6 @@ export const Routers = () => {
     const [recentlyItems, setRecentlyItems] = useState([])
     const [orders, setOrders] = useState([])
     const location = useLocation()
-    console.log(location.pathname)
 
 
     const handleAddRecently = (item) => {
@@ -96,7 +95,6 @@ export const Routers = () => {
             return [...filteredPrev, ...newItems];
         });
     }, [items])
-
 
 
     return(

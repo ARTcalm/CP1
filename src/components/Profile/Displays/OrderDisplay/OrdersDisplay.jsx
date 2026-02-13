@@ -11,9 +11,9 @@ export const OrdersDisplay = (props) => {
         <h1>Заказы</h1>
         <div className={style.ordersContainer}>
             {orders.length === 0? 
-             <div style={{margin:"0 auto",display:"flex", flexDirection:"column", alignItems:"center"}}>
+             <div className={style.nothing}>
                     <h1>Ничего не найдено</h1>
-                    <NavLink to={"/"} style={{textDecoration:"none", background:"#27332C", color:"white", padding:"20px 40px", borderRadius:"32px"}}>Перейти в каталог</NavLink>
+                    <NavLink to={"/"} style={{textDecoration:"none", background:"linear-gradient(-45deg, #378D5A, #27332C)", color:"white", padding:"20px 40px", borderRadius:"32px"}}>Перейти в каталог</NavLink>
             </div>
             :
             orders.map(el => (

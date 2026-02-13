@@ -58,11 +58,30 @@
     border-radius: 32px;
     text-decoration: none;
     color: white;
-    background: #7E9989;
-    transition: all 500ms ease;
+    background: linear-gradient(-45deg, #378D5A, #74DC9E, #27332C);
+    background-size: 300% 300%;
     cursor: pointer;
+    animation: nothover 1000ms ease forwards;
     &:hover{
-        background: #617569; 
+        animation: hover 1000ms ease forwards  ;
+    }
+}
+
+@keyframes hover {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 0% 100%;
+    }
+}
+
+@keyframes nothover {
+    0%{
+        background-position: 0% 100%;
+    }
+    100%{
+        background-position: 0% 0%;
     }
 }
 
@@ -140,12 +159,32 @@
 
     .widgetBG{
         width: 100%;
-        padding: 15px;
+        padding: 15px 0 15px 30px;
+    }
+
+    .widgetInfo{
+        max-width: max-content;
     }
 
     .recentlyTrack{
         min-height: 200px;
         margin: 0 20px;
+    }
+}
+
+@media (max-width:400px) {
+    .profile{
+        flex-direction: column;
+    }
+
+    .widgetBG{
+        padding: 0 0 15px 30px;
+        border-radius: 16px;
+    }
+
+    .recentlyContainer .title{
+        font-size: 24px;
+        margin-left: 10px;
     }
 }
 

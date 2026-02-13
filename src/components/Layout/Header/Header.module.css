@@ -165,13 +165,19 @@
         width:40%;
         padding: 10px;
         height: calc(100vh/6);
-        background: linear-gradient(-45deg, #378D5A, #74DC9E, #27332C);
         text-decoration: none;
         color: white;
         border: 1px solid gainsboro;
         border-radius: 16px;
         font-size: 20px;
         font-weight: bold;
+        background: linear-gradient(-45deg, #378D5A, #74DC9E, #27332C);
+        background-size: 300% 300%;
+        cursor: pointer;
+        animation: nothover 1000ms ease forwards;
+        &:hover{
+            animation: hover 1000ms ease forwards  ;
+        }
     }
 
 
@@ -186,5 +192,23 @@
         background: none;
         right: 20px;
         bottom: 15px;
+    }
+}
+
+@keyframes hover {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 0% 100%;
+    }
+}
+
+@keyframes nothover {
+    0%{
+        background-position: 0% 100%;
+    }
+    100%{
+        background-position: 0% 0%;
     }
 }

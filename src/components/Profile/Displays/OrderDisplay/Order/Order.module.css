@@ -1,5 +1,5 @@
 .orderCard{
-    background: #27332C;
+    background: linear-gradient(-45deg, #378D5A, #74DC9E, #27332C);
     color: white;
     border-radius: 16px;
 }
@@ -60,7 +60,8 @@
 }
 
 .itemsCard{
-    background: #7E9989;
+    background: white;
+    color: black;
 }
 
 .itemsCard img{
@@ -183,3 +184,36 @@
     border-radius: 8px;
 }
 
+@media (max-width:768px) {
+    .orderInfo h2{
+        max-width: max-content;
+        font-size: 20px;
+    }
+    .adressInfo, .contactInfo{
+        width: 100%;
+    }
+}
+
+@media (max-width:425px) {
+
+    .orderCard{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .topPanel{
+        font-size: 10px;
+    }
+
+    .orderItemsContainer table tr td{
+        font-size: 8px;
+        margin-bottom: 0;
+    }
+
+    .itemsCard img{
+        max-width: 40px;
+        border-radius: 8px;
+    }
+
+
+}

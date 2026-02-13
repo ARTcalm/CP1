@@ -74,8 +74,8 @@ export const Catalog = (props) => {
         <>
         <Greeting />
         <div id="catalog" className={style.catalog_container}>
-            <h1 style={{color:"black", paddingLeft:"20px"}}>Каталог</h1>
-            <hr style={{border:"1px solid black", width:"95%"}}/>
+            <h1 style={{color:"white", paddingLeft:"20px"}}>Каталог</h1>
+            <hr style={{border:"1px solid white", width:"95%"}}/>
             <div className={style.catalogs_panels}>
                 <div className={style.filters_panel}>
                     <h1>Поиск</h1>

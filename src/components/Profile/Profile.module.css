@@ -1,5 +1,5 @@
 .personalCabinetBG{
-    background: #7E9989;
+    background: linear-gradient(-45deg, #378D5A, #74DC9E, #27332C);
     max-width: 1200px;
     margin: 30px auto;
     min-height: 600px;
@@ -13,7 +13,7 @@
     width: 25%;
     gap: 20px;
     padding: 10px;
-    background: #97afa1;
+    background: linear-gradient(-45deg, #378D5A, #74DC9E, #27332C);
     border-radius: 16px 0 0 16px;
 }
 
@@ -58,8 +58,26 @@
         width: 100%;
     }
     .display{
+        min-height: 70vh;
         padding: 0;
         border-radius: 0 0 16px 16px;
     }
 }
 
+
+@media (max-width:400px) {
+    .personalCabinetBG{
+        max-width: 320px;
+        padding: 10px;
+    }
+
+    .sideBarMenu{
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 10px;
+    }
+    .buttonMenu{
+        padding: 20px 0;
+        margin: 0;
+    }
+}

@@ -4,12 +4,16 @@
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    background: #7E9989;
+    background: linear-gradient(0deg, #378D5A, #27332C);
     color: white;
 }
 
 .contactsBG h1{
     padding-left: 20px;
+}
+
+.contactsBG hr{
+    max-width: 90%;
 }
 
 .panels{
@@ -22,6 +26,10 @@
 
 .panels h1{
     margin-bottom:0 ;
+}
+
+.panels hr{
+    max-width: 100%;
 }
 
 

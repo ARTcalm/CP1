@@ -25,7 +25,7 @@ export const Order = (props) => {
                         <>
                         <table>
                             <tr>
-                                <td>Артикул</td>
+                                <td className={style.article}>Артикул</td>
                                 <td>Изображение</td>
                                 <td>Название</td>
                                 <td>Цена за шт.</td>
@@ -35,7 +35,7 @@ export const Order = (props) => {
                             {order.order.map(el => (
                             <tr className={style.itemsCard} >
                                 <td>{el.id}</td>
-                                <td><img src={`/CommandWorks/CP1/${el.img}`} /> </td>
+                                <td><img src={el.img} /> </td>
                                 <td style={{maxWidth:"150px"}}>{el.name}</td>
                                 <td>{el.price}₽</td>
                                 <td>{el.count}</td>

@@ -4,13 +4,14 @@
     max-width: 1200px;
     margin: 20px auto;
     flex-direction: column;
-    background: white;
-    border-radius: clamp(0.5vw, 0.75vw, 1vw);
+    background: linear-gradient(-45deg, #378D5A, #74DC9E, #27332C);
+    border-radius: 2vw;
     padding-bottom:20px ;
 }
 
 .catalogs_panels{
     display: flex;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -154,7 +155,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background: #7E9989;
+    background: white;
     padding: 20px;
     border-radius: 32px;
     max-width: 780px;
@@ -185,11 +186,11 @@
     align-items: center;
     width: 30px;
     height: 30px;
-    border-radius: 32px;
+    border-radius: 8px;
     transition: all 300ms ease;
     cursor: pointer;
-    background: white;
-    color: black;
+    background: linear-gradient(-45deg, #378D5A, #27332C);
+    color: white;
     list-style: none;
 }
 
@@ -238,12 +239,13 @@
     .catalogs_panels{
         align-items: center;
         flex-direction: column;
-        gap: 0;
+        padding: 10px;
+        gap: 10px;
     }
     .filters_panel{
         display: flex;
         flex-direction: row;
-        
+        padding: 10px;
         gap:10px;
     }
     .filters_panel h1{
@@ -310,6 +312,10 @@
         font-size: 24px;
     }
 
+    .catalogs_panels{
+        padding: 0;
+    }
+
     .filters_panel{
         padding: 10px;
     }
@@ -369,6 +375,7 @@
         max-width: 400px;
         padding: 0;
         border-radius: 16px;
+        justify-content: space-between;
     }
     .items{
         padding: 10px;
@@ -376,16 +383,15 @@
     }
 
     .containerClassName{
+        justify-content: center;
         gap: 5px;
         margin: 0;
-        margin-right:20px ;
         margin-bottom:10px;
     }
 
     .pageClassName{
-        width: 15px;
-        height: 15px;
-        font-size: 8px;
+        border-radius: 4px;
+        font-size: 12px;
     }
 
     .pageLinkClassName{
@@ -396,7 +402,7 @@
     .previousContainer, .nextContainer{
         width: 10px;
         height: 10px;
-        font-size: 8px;
+        font-size: 14px;
     }
 }
 
@@ -406,8 +412,7 @@
     }
 
     .filters_panel{
-        padding: 0;
-        padding-bottom: 10px;
+        padding: 10px 0;
         flex-direction: column;
     }
     
@@ -432,6 +437,7 @@
     }
 
     .sort_open{
+        padding: 5px 0 5px 0;
         width: 100%;
         max-width: calc(100% - 10px);
     }
@@ -441,9 +447,20 @@
         width: 100%;
         max-width: calc(100% - 20px);
         right: 0;
+        
     }
 
     .items{
         gap: 5px;
     }
+
+    .categories_container{
+        flex-direction: column;
+    }
+
+    .category_title, .sort_open, .sort_options li ,.search_container input{
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
 }

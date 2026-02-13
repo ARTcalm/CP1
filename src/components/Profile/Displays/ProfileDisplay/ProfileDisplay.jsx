@@ -1,11 +1,12 @@
 import { NavLink } from "react-router"
 import style from "./ProfileDisplay.module.css"
 import { Item } from "../../../Item/Item"
+import { useState } from "react"
 
 export const ProfileDisplay = (props) => {
 
     const {orders, favoursItems, recentlyItems, handleFavours, handleAddCart, handleAddRecently} = props
-
+    let [animation,setAnimation] = useState(false)
     return(
         <>
         <div className={style.profile}>
@@ -31,7 +32,7 @@ export const ProfileDisplay = (props) => {
             </div>
             <div className={style.widgets}>
                 <NavLink to={"orders"} className={style.widgetBG} >
-                    <div className={style.widgetInfo} >
+                    <div className={style.widgetInfo}  >
                         <img />
                         <h1>Заказы</h1>
                         <p>{orders.length !== 0 ? orders.length: 0} </p>
@@ -47,7 +48,7 @@ export const ProfileDisplay = (props) => {
             </div>
         </div>
         <div className={style.recentlyContainer}>
-            <h1>Вы недавно смотрели</h1>
+            <h1 className={style.title}>Вы недавно смотрели</h1>
             <div className={style.recentlyTrack}>
                 {recentlyItems.map(item => (
                     <Item item={item} handleFavours={handleFavours} handleAddCart={handleAddCart} handleAddRecently={handleAddRecently}/>
