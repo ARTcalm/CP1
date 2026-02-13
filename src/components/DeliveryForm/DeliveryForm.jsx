@@ -83,7 +83,7 @@ export const DeliveryForm = (props) => {
 
     return(
         <div className={style.deliveryContainerBG}>
-            <form className={style.form} >
+            <form className={style.form} name="delivery-form">
                 <h1 className={style.formTitle}>Заполните форму</h1>
                 <div className={style.formBG}>
                     <h1>Адрес доставки</h1>
@@ -91,19 +91,19 @@ export const DeliveryForm = (props) => {
                     <div className={style.adress}>
                         <label className={style.label}>
                             Улица
-                            <input onChange={handleChange} name="street" value={order.street}  type="text" placeholder="Город, район, улица"  />
+                            <input onChange={handleChange} name="street" value={order.street}  type="text" placeholder="Город, район, улица" required  />
                         </label>
                         <label className={style.label}>
                             Дом (корпус)
-                            <input onChange={handleChange} name="house" value={order.house} type="text"  placeholder="Дом" />
+                            <input onChange={handleChange} name="house" value={order.house} type="text"  placeholder="Дом" required />
                         </label>
                         <label className={style.label}>
                             Этаж
-                            <input onChange={handleChange} name="floorNum" value={order.floorNum} type="text" placeholder="Этаж"  />
+                            <input onChange={handleChange} name="floorNum" value={order.floorNum} type="text" placeholder="Этаж" required />
                         </label>
                         <label className={style.label}>
                             Квартира
-                            <input onChange={handleChange} name="apartNum" value={order.apartNum} type="text"  placeholder="Квартира" />
+                            <input onChange={handleChange} name="apartNum" value={order.apartNum} type="text"  placeholder="Квартира" required />
                         </label>
                     </div>
                     <h1>Контактные данные</h1>
@@ -111,7 +111,7 @@ export const DeliveryForm = (props) => {
                     <div className={style.contact}>
                         <label className={style.label}>
                             Телефон
-                            <input onChange={handleChange} name="tel" value={order.tel}  type="number" placeholder="Телефон"/>
+                            <input onChange={handleChange} name="tel" value={order.tel}  type="number" placeholder="Телефон" required/>
                         </label>
                         <label className={style.label}>
                             Электронная почта
@@ -144,9 +144,9 @@ export const DeliveryForm = (props) => {
                     <p>Количество штук: {counts}</p>
                     <h1>Итого: {summa}₽</h1>
                     <div className={style.submit}>
-                    <button id="submit" onClick={() => handleSubmitOrder(cartItems)} >Подтвердить покупку</button>
+                    <button id="submit" form="delivery-form" onClick={() => handleSubmitOrder(cartItems)} >Подтвердить покупку</button>
                         <div>
-                            <input onChange={handleChange} name="agree" value={order.agree} type='checkbox' />
+                            <input onChange={handleChange} name="agree" value={order.agree} type='checkbox' form="delivery-form" />
                             <p>Я согласен с <a href="#">пользовательским соглашением и условиями оферты</a></p>
                         </div>
                     </div>

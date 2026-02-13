@@ -276,7 +276,7 @@
 
     
     .card_desc{
-        justify-content:flex-end;
+        justify-content:space-around
     }
 
     .features_card svg{
@@ -286,12 +286,13 @@
     .parameters{
         gap: 10px;
         max-height: max-content;
+        justify-content: space-between;
     }
 
     .parameter{
+        width: max-content;
         border: 0;
         margin-bottom: 10px;
-        max-height: max-content;
     }
 
     .parameter p{
@@ -312,6 +313,18 @@
 
     .sumPrice p{
         font-size: 20px;
+    }
+
+    .card_counter{
+        padding: 0;
+        max-width: 160px;
+    }
+
+    .card_counter p{
+        max-width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
 
@@ -338,10 +351,15 @@
 
     .card_desc{
         position: relative;
+        justify-content: flex-end;
     }
 
     .card_title h1{
         font-size: 12px;
+    }
+
+    .parameter{
+        max-height: max-content;
     }
 
     .sumPrice{
@@ -362,14 +380,6 @@
         position: absolute;
         bottom: 0;
         right: 10px;
-    }
-
-    .card_counter{
-        padding: 0;
-    }
-
-    .card_counter p{
-        width: 45px;
     }
 
     .card_counter button{
